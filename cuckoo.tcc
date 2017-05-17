@@ -168,10 +168,10 @@ cuckoo <Complexity, CycleSize, Easiness> ::path (node_type * graph, node_type u,
 template <unsigned int Complexity, unsigned int CycleSize, unsigned int Easiness>
 void cuckoo <Complexity, CycleSize, Easiness> ::init (const void * data) const {
     auto key = static_cast <const std::uint64_t *> (data);
-    this->v [0] = key [0] ^ 0x736f6d6570736575uLL;
-    this->v [1] = key [1] ^ 0x646f72616e646f6duLL;
-    this->v [2] = key [0] ^ 0x6c7967656e657261uLL;
-    this->v [3] = key [1] ^ 0x7465646279746573uLL;
+    this->v [0] = key [0];
+    this->v [1] = key [1];
+    this->v [2] = key [2];
+    this->v [3] = key [3];
 };
 
 template <unsigned int Complexity, unsigned int CycleSize, unsigned int Easiness>
